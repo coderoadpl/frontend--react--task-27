@@ -2,12 +2,14 @@
 import React from 'react'
 
 export const Checkbox = (props) => {
+  const { label, isChecked } = props
+
   return (
     <label>
-      {props.label}
+      {label}
       <input
         type={'checkbox'}
-        checked={props.isChecked}
+        checked={isChecked}
       />
     </label>
   )
@@ -18,7 +20,7 @@ export const App = () => {
     <div>
       <Checkbox
         label={'Checkbox label'}
-        isChecked
+        isChecked={true}
       />
     </div>
   )
